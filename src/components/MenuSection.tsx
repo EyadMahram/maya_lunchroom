@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { QamariyaCorner, QamariyaBorder, QamariyaDivider, ArchMotif } from "@/components/YemeniMotifs";
 
-const categories = ["Breakfast", "Sandwiches", "Salads", "Drinks"] as const;
+const categories = ["Breakfast", "Open Toasts", "Starters", "Pancakes", "Waffles", "Crêpes"] as const;
 type Category = (typeof categories)[number];
 
 interface MenuItem {
@@ -15,28 +15,53 @@ interface MenuItem {
 
 const menuData: Record<Category, MenuItem[]> = {
   Breakfast: [
-    { name: "Avocado Toast",       description: "Toasted sourdough, smashed avocado, cherry tomatoes, lemon zest, red pepper flakes", price: "9", tag: "Popular" },
-    { name: "Egg & Cheese Croissant", description: "Buttery croissant, scrambled eggs, Gouda cheese, fresh chives",                  price: "8" },
-    { name: "Yoghurt Bowl",        description: "Greek yoghurt, seasonal fruit, house-made granola, honey drizzle",                   price: "8" },
-    { name: "Turkish Menemen",     description: "Scrambled eggs with tomato, green peppers and spices, served with fresh bread",      price: "10", tag: "Signature" },
+    { name: "English Breakfast",          description: "Crispy bacon, grilled sausages, baked beans, tomatoes, mushrooms, eggs, warm toast",                                                                                   price: "17,95", tag: "Popular" },
+    { name: "Çılbır Chef Special",        description: "Poached eggs on garlic yogurt base, butter-chili drizzle",                                                                                                             price: "15,95", tag: "Signature" },
+    { name: "Fried Eggs",                 description: "Eggs cooked to a golden edge (3 eggs)",                                                                                                                               price: "8,95" },
+    { name: "Turkish Sucuk Eggs",         description: "Eggs and spiced sucuk",                                                                                                                                               price: "11,95" },
+    { name: "Turkish Menemen",            description: "Warm eggs with sautéed tomatoes and peppers",                                                                                                                         price: "10,95" },
+    { name: "Turkish Sautéed Beef & Eggs", description: "Fresh eggs with pan-fried beef",                                                                                                                                    price: "14,50" },
+    { name: "Omelette",                   description: "Choice of ingredients, 3 eggs",                                                                                                                                       price: "9,50" },
+    { name: "Croissant Breakfast Melt",   description: "Golden croissant with omelette, beef salami, ricotta",                                                                                                               price: "13,95" },
+    { name: "Smoothie Bowl",              description: "Yogurt, strawberry, banana, blueberry, honey, coconut, granola",                                                                                                     price: "8,95" },
+    { name: "Mexican Bowl",               description: "Mexican rice, grilled chicken, tomatoes, red onion, black beans, sweet corn, avocado",                                                                               price: "14,95" },
+    { name: "Turkish Bagel Egg",          description: "Eggs, spinach, cherry tomatoes, mozzarella, red onion, sun-dried tomatoes, parsley on a bagel",                                                                     price: "13,95" },
+    { name: "Mini Breakfast",             description: "Croissant, multigrain bread, cream cheese, butter, strawberry jam, boiled egg, cucumber, cherry tomatoes, olives, mini green salad",                                 price: "14,95" },
+    { name: "Turkish Breakfast Platter For 2", description: "Rulo böreği, turkish bagel, fried dough, three-cheese plate, apricot & walnut, tahini & molasses, clotted cream & honey, fried eggs, butter, two kinds of olives, salad, fried sausage, tea", price: "32,95", tag: "For 2" },
   ],
-  Sandwiches: [
-    { name: "Club Sandwich",         description: "Toasted white bread, chicken, bacon, lettuce, tomato, house mayo",                price: "12", tag: "Classic" },
-    { name: "Tuna Melt",             description: "Sourdough, house tuna salad, melted cheddar, capers, red onion",                  price: "11" },
-    { name: "Turkish Chicken Wrap",  description: "Grilled chicken, hummus, fresh vegetables, sumac onions, warm flatbread",         price: "12", tag: "Chef's Pick" },
-    { name: "Caprese Ciabatta",      description: "Fresh mozzarella, heirloom tomato, basil, olive oil, aged balsamic",             price: "11" },
+  "Open Toasts": [
+    { name: "Avocado Fried Egg",   description: "Cream cheese, avocado smash, mixed salad, fried eggs, cherry tomatoes, black pepper, paprika",                                       price: "11,95" },
+    { name: "Avocado Salmon",      description: "Cream cheese, avocado smash, mixed salad, salmon, cherry tomatoes, mustard sauce, sesame seeds, black cumin",                         price: "14,50", tag: "Popular" },
+    { name: "Chicken Pesto",       description: "Cacık, pesto, mixed salad, cherry tomatoes, grilled chicken, sesame seeds, black cumin",                                              price: "13,95" },
+    { name: "Mediterranean Bread", description: "Avocado smash, sliced tomatoes, soft mozzarella, poached egg",                                                                        price: "13,95" },
+    { name: "Avocado Hummus",      description: "Sliced avocado, hummus, mixed salad, black olives, tomato, cucumber, balsamic dressing, sesame seeds, black cumin",                  price: "11,95" },
   ],
-  Salads: [
-    { name: "Caesar Salad",   description: "Crisp romaine, Parmesan shavings, house croutons, anchovy Caesar dressing",             price: "12" },
-    { name: "Quinoa Bowl",    description: "Roasted vegetables, chickpeas, feta, pomegranate seeds, lemon tahini dressing",          price: "13", tag: "Vegan Option" },
-    { name: "Greek Salad",    description: "Cucumber, olives, feta, red onion, cherry tomatoes, dried oregano",                     price: "11" },
-    { name: "Smoked Salmon",  description: "Mixed greens, smoked salmon, capers, dill cream dressing, lemon",                       price: "14", tag: "Seasonal" },
+  Starters: [
+    { name: "Soup of the Day",      description: "Ask your server for today's selection",                                                                                               price: "7,95" },
+    { name: "Sharing Dip Platter",  description: "Hummus, guacamole, fresh salsa, trio of chips",                                                                                      price: "7,95" },
+    { name: "Sigara Böreği",        description: "Chili sauce, yogurt dip, spicy paste, sesame & black cumin, arugula",                                                               price: "8,95" },
+    { name: "Beef Carpaccio",       description: "Raw beef, extra virgin olive oil, lemon juice, shaved parmesan, rocket salad",                                                       price: "14,95" },
+    { name: "Bitterballen",         description: "6 pcs beef bitterballen with mustard sauce",                                                                                         price: "9,95" },
+    { name: "Cheesy Nachos",        description: "Tortilla chips, melted cheese, fresh salsa",                                                                                         price: "9,95" },
+    { name: "Cheese Sticks",        description: "Golden fried cheese sticks, dipping sauce",                                                                                          price: "9,95" },
   ],
-  Drinks: [
-    { name: "Filter Coffee",     description: "Freshly ground Colombian blend, served light, medium or strong",                      price: "3" },
-    { name: "Maya Latte",        description: "House espresso, steamed oat milk, hint of vanilla",                                   price: "4", tag: "Signature" },
-    { name: "Fresh Mint Tea",    description: "Loose-leaf green tea, fresh garden mint, honey on the side",                          price: "3" },
-    { name: "Fresh Orange Juice", description: "Hand-pressed seasonal oranges, served chilled",                                     price: "4" },
+  Pancakes: [
+    { name: "Strawberry Dream",  description: "Fresh strawberries, maple syrup, whipped cream, powdered sugar",                    price: "9,95", tag: "Favourite" },
+    { name: "Choco Banana",      description: "Chocolate sauce, banana slices, almond bits, powdered sugar",                       price: "10,95" },
+    { name: "Honey Granola",     description: "Crunchy granola, natural honey, fresh blueberries, powdered sugar",                 price: "9,95" },
+    { name: "Biscoff Crush",     description: "Lotus Biscoff spread, Biscoff cookie pieces, caramel sauce, powdered sugar",       price: "10,95" },
+  ],
+  Waffles: [
+    { name: "Strawberry Supreme",     description: "Fresh strawberries, mascarpone, maple syrup, powdered sugar",                  price: "9,95", tag: "Favourite" },
+    { name: "Choco Hazelnut Bliss",   description: "Chocolate sauce, banana slices, roasted hazelnuts, powdered sugar",           price: "10,95" },
+    { name: "Biscoff Dream",          description: "Lotus Biscoff spread, Biscoff cookie pieces, caramel sauce, powdered sugar",  price: "10,95" },
+    { name: "Blueberry Cloud",        description: "Blueberry sauce, fresh blueberries, whipped cream, powdered sugar",           price: "9,95" },
+  ],
+  Crêpes: [
+    { name: "Parisienne Strawberry", description: "Mascarpone, fresh strawberries, maple syrup, powdered sugar",                  price: "9,95" },
+    { name: "Choco Banana",          description: "Rich chocolate, banana slices, chocolate sauce, powdered sugar",               price: "9,95", tag: "Popular" },
+    { name: "Honey Almond",          description: "Natural honey, roasted almonds, buttery flavor",                               price: "10,95" },
+    { name: "Biscoff Cinnamon",      description: "Lotus Biscoff cream, Biscoff cookie pieces, cinnamon",                        price: "10,95" },
   ],
 };
 
@@ -83,7 +108,7 @@ const MenuSection = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <p className="text-xs tracking-[0.4em] uppercase text-primary mb-4">Fresh & Seasonal</p>
+          <p className="text-xs tracking-[0.4em] uppercase text-primary mb-4">Something for Everyone</p>
           <h2 className="font-display text-4xl sm:text-5xl tracking-wider mb-6">Our Menu</h2>
           <QamariyaDivider />
         </motion.div>
@@ -136,7 +161,7 @@ const MenuSection = () => {
                   </div>
                 </div>
 
-                {/* Yemeni geometric border divider */}
+                {/* Decorative border divider */}
                 <QamariyaBorder className="mb-8" />
 
                 {/* Menu items */}

@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import pancakes from "@/assets/pancakes.png";
+import outdoorCoffee from "@/assets/hero.png";
 import interior from "@/assets/interior.png";
 import desserts from "@/assets/desserts.png";
 import exterior from "@/assets/exterior.png";
@@ -8,12 +9,13 @@ import crepes from "@/assets/crepes.png";
 import ambiance from "@/assets/ambiance.png";
 
 const images = [
-  { src: pancakes, alt: "Stacked pancakes with strawberries and chocolate drizzle", caption: "Pancakes" },
-  { src: interior, alt: "Cozy interior of Maya Lunchroom with window view of Zaandam", caption: "Cozy Interior" },
-  { src: desserts, alt: "Rainbow layered cake and chocolate dessert on outdoor terrace", caption: "Terrace Treats" },
-  { src: exterior, alt: "Maya Lunchroom exterior — iconic green Zaandam building", caption: "Our Café" },
-  { src: crepes, alt: "Fresh crepes with Nutella and strawberries", caption: "Crepes" },
-  { src: ambiance, alt: "Lush green interior ceiling with hanging flowers", caption: "Ambiance" },
+  { src: pancakes,     alt: "Stacked pancakes with strawberries and chocolate drizzle", caption: "Pancakes" },
+  { src: outdoorCoffee, alt: "Outdoor terrace with coffee and dessert, Zaandam architecture", caption: "Terrace" },
+  { src: interior,    alt: "Cozy interior of Maya Lunchroom with window view of Zaandam", caption: "Cozy Interior" },
+  { src: desserts,    alt: "Rainbow layered cake and chocolate dessert", caption: "Signature Desserts" },
+  { src: exterior,    alt: "Maya Lunchroom exterior — iconic green Zaandam building", caption: "Our Café" },
+  { src: crepes,      alt: "Fresh crepes with Nutella and strawberries", caption: "Crêpes" },
+  { src: ambiance,    alt: "Lush green interior ceiling with hanging flowers", caption: "Ambiance" },
 ];
 
 const GallerySection = () => {

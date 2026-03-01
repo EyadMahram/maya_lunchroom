@@ -10,11 +10,11 @@ const HeroSection = () => {
       <div className="absolute inset-0">
         <img
           src={heroImg}
-          alt="Old City of Sana'a, Yemen — UNESCO World Heritage Site"
+          alt="Maya Lunchroom — Stadhuisplein, Zaandam"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0" style={{ backgroundColor: "rgba(50, 18, 5, 0.68)" }} />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-[#2d1005]/30 to-transparent" />
+        <div className="absolute inset-0" style={{ backgroundColor: "rgba(80, 40, 15, 0.55)" }} />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-[#4a2008]/25 to-transparent" />
       </div>
 
       {/* Subtle qamariya stars in corners */}
