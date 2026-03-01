@@ -17,22 +17,22 @@ const FooterSection = () => {
           <div>
             <h4 className="text-xs tracking-[0.3em] uppercase text-primary mb-6">Hours</h4>
             <div className="space-y-3 text-sm text-muted-foreground font-light">
-              <p>Monday: 08:00 – 17:00</p>
-              <p>Tuesday: 08:00 – 17:00</p>
-              <p>Wednesday: 08:00 – 17:00</p>
-              <p>Thursday: 08:00 – 17:00</p>
-              <p>Friday: 08:00 – 17:00</p>
-              <p>Saturday: 09:00 – 17:00</p>
-              <p>Sunday: Closed</p>
+              <p>Monday: 08:00 – 21:00</p>
+              <p>Tuesday: 08:00 – 19:00</p>
+              <p>Wednesday: 08:00 – 19:00</p>
+              <p>Thursday: 08:00 – 19:00</p>
+              <p>Friday: 08:00 – 21:00</p>
+              <p>Saturday: 08:00 – 21:00</p>
+              <p>Sunday: 08:00 – 21:00</p>
             </div>
           </div>
 
           <div>
             <h4 className="text-xs tracking-[0.3em] uppercase text-primary mb-6">Contact</h4>
             <div className="space-y-3 text-sm text-muted-foreground font-light">
-              <p className="flex items-center gap-3"><MapPin size={14} className="text-primary shrink-0" /> Westzijde 19, 1506 EA Zaandam</p>
-              <p className="flex items-center gap-3"><Phone size={14} className="text-primary shrink-0" /> +31 6 16 42 13 11</p>
-              <p className="flex items-center gap-3"><Mail size={14} className="text-primary shrink-0" /> info@mayalunchroom.nl</p>
+              <p className="flex items-center gap-3"><MapPin size={14} className="text-primary shrink-0" /> Stadhuisplein 90, 1506MZ Zaandam</p>
+              <p className="flex items-center gap-3"><Phone size={14} className="text-primary shrink-0" /> +31 6 11998894</p>
+              <p className="flex items-center gap-3"><Mail size={14} className="text-primary shrink-0" /> info@mayapatisserie.nl</p>
             </div>
           </div>
         </div>

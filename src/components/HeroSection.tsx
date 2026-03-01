@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
-import heroImg from "@/assets/hero.png";
+import heroImg from "@/assets/exterior.png";
 import { QamariyaDivider, QamariyaStar } from "@/components/YemeniMotifs";
 
 const HeroSection = () => {
@@ -13,8 +13,8 @@ const HeroSection = () => {
           alt="Old City of Sana'a, Yemen — UNESCO World Heritage Site"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/65" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-black/30 to-transparent" />
+        <div className="absolute inset-0" style={{ backgroundColor: "rgba(50, 18, 5, 0.68)" }} />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-[#2d1005]/30 to-transparent" />
       </div>
 
       {/* Subtle qamariya stars in corners */}
