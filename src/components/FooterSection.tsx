@@ -1,5 +1,6 @@
 import { MapPin, Phone, Mail } from "lucide-react";
 import { QamariyaBorder, QamariyaDivider } from "@/components/YemeniMotifs";
+import logo from "@/assets/logo.png";
 
 const FooterSection = () => {
   return (
@@ -7,8 +8,7 @@ const FooterSection = () => {
       <div className="max-w-5xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
           <div>
-            <h3 className="font-display text-2xl tracking-wider gold-gradient-text mb-1">MAYA</h3>
-            <p className="text-primary/60 text-sm mb-4 tracking-widest font-body">Lunchroom</p>
+            <img src={logo} alt="Maya Lunchroom" className="h-16 w-auto mb-4" />
             <p className="text-sm text-muted-foreground leading-relaxed font-light">
               A cozy café in the heart of Zaandam, serving fresh, high-quality food and warm hospitality every day.
             </p>

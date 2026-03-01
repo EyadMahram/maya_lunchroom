@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -31,9 +32,8 @@ const Navbar = () => {
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
-          <a href="#" className="font-display text-2xl tracking-wider gold-gradient-text flex flex-col leading-tight">
-            <span>MAYA</span>
-            <span className="text-xs tracking-widest text-primary/60 font-body">Lunchroom</span>
+          <a href="#" className="flex items-center">
+            <img src={logo} alt="Maya Lunchroom" className="h-12 w-auto" />
           </a>
 
           <div className="hidden md:flex items-center gap-10">

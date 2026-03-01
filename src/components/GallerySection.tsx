@@ -1,19 +1,19 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import dish1 from "@/assets/dish-1.jpg";
-import dish2 from "@/assets/dish-2.jpg";
-import dish3 from "@/assets/dish-3.jpg";
-import dish4 from "@/assets/dish-4.jpg";
-import dish5 from "@/assets/dish-5.jpg";
-import dish6 from "@/assets/dish-6.jpg";
+import pancakes from "@/assets/pancakes.png";
+import interior from "@/assets/interior.png";
+import desserts from "@/assets/desserts.png";
+import exterior from "@/assets/exterior.png";
+import crepes from "@/assets/crepes.png";
+import ambiance from "@/assets/ambiance.png";
 
 const images = [
-  { src: dish1, alt: "Avocado toast on toasted sourdough with fresh toppings", caption: "Avocado Toast" },
-  { src: dish2, alt: "Club sandwich with chicken, bacon and fresh greens", caption: "Club Sandwich" },
-  { src: dish3, alt: "Freshly brewed specialty coffee with oat milk", caption: "Maya Latte" },
-  { src: dish4, alt: "Greek yoghurt bowl with seasonal fruit and granola", caption: "Yoghurt Bowl" },
-  { src: dish5, alt: "Turkish menemen — eggs with tomato and peppers", caption: "Menemen" },
-  { src: dish6, alt: "Fresh quinoa bowl with roasted vegetables and feta", caption: "Quinoa Bowl" },
+  { src: pancakes, alt: "Stacked pancakes with strawberries and chocolate drizzle", caption: "Pancakes" },
+  { src: interior, alt: "Cozy interior of Maya Lunchroom with window view of Zaandam", caption: "Cozy Interior" },
+  { src: desserts, alt: "Rainbow layered cake and chocolate dessert on outdoor terrace", caption: "Terrace Treats" },
+  { src: exterior, alt: "Maya Lunchroom exterior — iconic green Zaandam building", caption: "Our Café" },
+  { src: crepes, alt: "Fresh crepes with Nutella and strawberries", caption: "Crepes" },
+  { src: ambiance, alt: "Lush green interior ceiling with hanging flowers", caption: "Ambiance" },
 ];
 
 const GallerySection = () => {

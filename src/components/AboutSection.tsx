@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { QamariyaDivider, QamariyaBorder, QamariyaStar } from "@/components/YemeniMotifs";
-import heroImg from "@/assets/hero-restaurant.jpg";
+import heroImg from "@/assets/hero.png";
 
 const pillars = [
   { title: "Our Menu",       body: "A carefully curated selection of fresh sandwiches, salads, baked goods, and signature coffees — all prepared with high-quality, seasonal ingredients and a touch of Turkish inspiration." },
