@@ -8,12 +8,12 @@ import dish5 from "@/assets/dish-5.jpg";
 import dish6 from "@/assets/dish-6.jpg";
 
 const images = [
-  { src: dish1, alt: "Kabsa — fragrant rice with spiced lamb, a classic Arabic centrepiece", caption: "Kabsa" },
-  { src: dish2, alt: "Mansaf — slow-cooked lamb in fermented yoghurt sauce on flatbread", caption: "Mansaf" },
-  { src: dish3, alt: "Falafel — crispy fried chickpea patties with herbs and sesame tahini", caption: "Falafel" },
-  { src: dish4, alt: "Kunafa — crispy shredded pastry soaked in rose-water syrup with sweet cheese", caption: "Kunafa" },
-  { src: dish5, alt: "Baklava — layers of flaky pastry, pistachios and honey syrup", caption: "Baklava" },
-  { src: dish6, alt: "Shawarma — slow-roasted spiced meat served with garlic sauce and flatbread", caption: "Shawarma" },
+  { src: dish1, alt: "Avocado toast on toasted sourdough with fresh toppings", caption: "Avocado Toast" },
+  { src: dish2, alt: "Club sandwich with chicken, bacon and fresh greens", caption: "Club Sandwich" },
+  { src: dish3, alt: "Freshly brewed specialty coffee with oat milk", caption: "Maya Latte" },
+  { src: dish4, alt: "Greek yoghurt bowl with seasonal fruit and granola", caption: "Yoghurt Bowl" },
+  { src: dish5, alt: "Turkish menemen — eggs with tomato and peppers", caption: "Menemen" },
+  { src: dish6, alt: "Fresh quinoa bowl with roasted vegetables and feta", caption: "Quinoa Bowl" },
 ];
 
 const GallerySection = () => {
@@ -30,7 +30,7 @@ const GallerySection = () => {
           className="text-center mb-16"
         >
           <p className="text-xs tracking-[0.4em] uppercase text-primary mb-4">A Visual Journey</p>
-          <h2 className="font-display text-4xl sm:text-5xl tracking-wider mb-6">The Flavours of Saba</h2>
+          <h2 className="font-display text-4xl sm:text-5xl tracking-wider mb-6">The Flavours of Maya</h2>
           <div className="gold-line mx-auto" />
         </motion.div>
 

@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { QamariyaCorner, QamariyaBorder, QamariyaDivider, ArchMotif } from "@/components/YemeniMotifs";
 
-const categories = ["Starters", "Mains", "Desserts", "Drinks"] as const;
+const categories = ["Breakfast", "Sandwiches", "Salads", "Drinks"] as const;
 type Category = (typeof categories)[number];
 
 interface MenuItem {
@@ -14,29 +14,29 @@ interface MenuItem {
 }
 
 const menuData: Record<Category, MenuItem[]> = {
-  Starters: [
-    { name: "Saltah Soup",          description: "Traditional fenugreek stew, slow-braised lamb, fresh hilbeh foam, zhoug drizzle", price: "18", tag: "Signature" },
-    { name: "Mutabbaq",             description: "Crispy layered pastry, spiced minced lamb, spring onions, eggs, turmeric",        price: "16" },
-    { name: "Haradah",              description: "Fire-roasted tomato and chili relish, toasted cumin, warm khobz flatbread",       price: "12" },
-    { name: "Bint Al-Sahn Starter", description: "Warm pull-apart dough, wildflower honey, black seed, clarified butter",          price: "14" },
+  Breakfast: [
+    { name: "Avocado Toast",       description: "Toasted sourdough, smashed avocado, cherry tomatoes, lemon zest, red pepper flakes", price: "9", tag: "Popular" },
+    { name: "Egg & Cheese Croissant", description: "Buttery croissant, scrambled eggs, Gouda cheese, fresh chives",                  price: "8" },
+    { name: "Yoghurt Bowl",        description: "Greek yoghurt, seasonal fruit, house-made granola, honey drizzle",                   price: "8" },
+    { name: "Turkish Menemen",     description: "Scrambled eggs with tomato, green peppers and spices, served with fresh bread",      price: "10", tag: "Signature" },
   ],
-  Mains: [
-    { name: "Lamb Mandi",        description: "Pit-smoked whole lamb, fragrant basmati rice, Yemeni hawayej spice blend, raisins",   price: "52", tag: "Chef's Choice" },
-    { name: "Chicken Zurbian",   description: "Saffron-spiced layered rice, braised free-range chicken, caramelized onions, pine nuts", price: "38" },
-    { name: "Haneeth",           description: "Slow-roasted lamb shoulder, turmeric potatoes, garden greens, fresh zhoug sauce",    price: "46" },
-    { name: "Aseed with Lamb",   description: "Silky barley porridge, slow-braised lamb stew, clarified butter, cumin-scented broth", price: "34" },
+  Sandwiches: [
+    { name: "Club Sandwich",         description: "Toasted white bread, chicken, bacon, lettuce, tomato, house mayo",                price: "12", tag: "Classic" },
+    { name: "Tuna Melt",             description: "Sourdough, house tuna salad, melted cheddar, capers, red onion",                  price: "11" },
+    { name: "Turkish Chicken Wrap",  description: "Grilled chicken, hummus, fresh vegetables, sumac onions, warm flatbread",         price: "12", tag: "Chef's Pick" },
+    { name: "Caprese Ciabatta",      description: "Fresh mozzarella, heirloom tomato, basil, olive oil, aged balsamic",             price: "11" },
   ],
-  Desserts: [
-    { name: "Bint Al-Sahn", description: "Layered honey cake, Sidr wildflower honey, black seed, warm clarified butter",            price: "16", tag: "Showpiece" },
-    { name: "Hareeseh",     description: "Semolina cake, date honey syrup, toasted almond, orange blossom water",                   price: "14" },
-    { name: "Asida",        description: "Traditional sweet porridge, aged date molasses, clarified butter, cinnamon dust",         price: "12" },
-    { name: "Sambosa",      description: "Crispy fried pastry pockets, sweet spiced cheese, cardamom honey dip",                    price: "13" },
+  Salads: [
+    { name: "Caesar Salad",   description: "Crisp romaine, Parmesan shavings, house croutons, anchovy Caesar dressing",             price: "12" },
+    { name: "Quinoa Bowl",    description: "Roasted vegetables, chickpeas, feta, pomegranate seeds, lemon tahini dressing",          price: "13", tag: "Vegan Option" },
+    { name: "Greek Salad",    description: "Cucumber, olives, feta, red onion, cherry tomatoes, dried oregano",                     price: "11" },
+    { name: "Smoked Salmon",  description: "Mixed greens, smoked salmon, capers, dill cream dressing, lemon",                       price: "14", tag: "Seasonal" },
   ],
   Drinks: [
-    { name: "Qishr — Saba Blend", description: "Yemeni coffee-husk brew, fresh ginger, cardamom, cinnamon, honey",                 price: "9",  tag: "House Special" },
-    { name: "Chai Karak",         description: "Spiced loose-leaf tea, saffron, cardamom, rose water, condensed milk",              price: "8" },
-    { name: "Tamarind Cooler",    description: "House-made tamarind concentrate, fresh ginger, wildflower honey, sparkling water",  price: "10" },
-    { name: "Naqia",              description: "Chilled spring water infused with lemon verbena, fresh mint, and dried lime",       price: "7" },
+    { name: "Filter Coffee",     description: "Freshly ground Colombian blend, served light, medium or strong",                      price: "3" },
+    { name: "Maya Latte",        description: "House espresso, steamed oat milk, hint of vanilla",                                   price: "4", tag: "Signature" },
+    { name: "Fresh Mint Tea",    description: "Loose-leaf green tea, fresh garden mint, honey on the side",                          price: "3" },
+    { name: "Fresh Orange Juice", description: "Hand-pressed seasonal oranges, served chilled",                                     price: "4" },
   ],
 };
 
@@ -83,7 +83,7 @@ const MenuSection = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <p className="text-xs tracking-[0.4em] uppercase text-primary mb-4">From the Ancient Kingdom</p>
+          <p className="text-xs tracking-[0.4em] uppercase text-primary mb-4">Fresh & Seasonal</p>
           <h2 className="font-display text-4xl sm:text-5xl tracking-wider mb-6">Our Menu</h2>
           <QamariyaDivider />
         </motion.div>
@@ -168,7 +168,7 @@ const MenuSection = () => {
                       <div className="hidden sm:flex flex-1 items-end pb-1 mx-2">
                         <div className="w-full border-b border-dotted border-border/40" />
                       </div>
-                      <span className="font-display text-lg text-primary shrink-0">${item.price}</span>
+                      <span className="font-display text-lg text-primary shrink-0">€{item.price}</span>
                     </motion.div>
                   ))}
                 </div>

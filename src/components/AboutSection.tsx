@@ -3,9 +3,9 @@ import { QamariyaDivider, QamariyaBorder, QamariyaStar } from "@/components/Yeme
 import heroImg from "@/assets/hero-restaurant.jpg";
 
 const pillars = [
-  { title: "Our Heritage",   body: "Rooted in the ancient Kingdom of Saba, our recipes are passed down through generations — unchanged, uncompromised, and full of soul." },
-  { title: "Our Craft",      body: "Every dish is built on time-honoured technique: slow-smoked meats, hand-ground spice blends, and doughs kneaded by hand each morning." },
-  { title: "Our Hospitality", body: "In Yemen, a guest is a gift. We welcome every table with the warmth and generosity that has defined our culture for thousands of years." },
+  { title: "Our Menu",       body: "A carefully curated selection of fresh sandwiches, salads, baked goods, and signature coffees — all prepared with high-quality, seasonal ingredients and a touch of Turkish inspiration." },
+  { title: "Our Craft",      body: "Every item is made with care: from hand-pressed juices to freshly baked pastries and slow-brewed specialty coffees, prepared just the way you like them." },
+  { title: "Our Hospitality", body: "At Maya, every guest feels at home. We're committed to warm, attentive service that turns every visit into a pleasant and memorable experience." },
 ];
 
 const AboutSection = () => {
@@ -42,7 +42,7 @@ const AboutSection = () => {
             <div className="relative overflow-hidden aspect-[4/5]">
               <img
                 src={heroImg}
-                alt="Old City of Sana'a — ancient Yemeni architecture"
+                alt="Maya Lunchroom — cozy café in Zaandam"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
@@ -59,17 +59,16 @@ const AboutSection = () => {
             transition={{ duration: 0.9, delay: 0.1 }}
             className="flex flex-col justify-center"
           >
-            <p className="arabic-text text-3xl text-primary/40 mb-4 tracking-widest">مطعم سبأ</p>
-            <h3 className="font-display text-3xl sm:text-4xl tracking-wider mb-6 leading-snug">
-              A Table Rooted in<br />
-              <span className="gold-gradient-text">Ancient Yemen</span>
+              <h3 className="font-display text-3xl sm:text-4xl tracking-wider mb-6 leading-snug">
+              A Cozy Corner in<br />
+              <span className="gold-gradient-text">the Heart of Zaandam</span>
             </h3>
             <div className="space-y-5 text-muted-foreground font-light leading-relaxed text-sm sm:text-base">
               <p>
-                Saba Restaurant was born from a deep love for Yemeni cuisine — one of the Arab world's oldest and most distinctive culinary traditions. Named after the legendary Kingdom of Saba (Sheba), we carry that ancient legacy into every plate we serve.
+                Maya Lunchroom was born from a passion for simple, high-quality food and genuine hospitality. Whether you're starting your day with a wholesome breakfast, stopping by for a quick lunch, or taking a break with one of our signature coffees or teas — we strive to make every visit a pleasant and satisfying experience.
               </p>
               <p>
-                Our kitchen draws on the rich diversity of Yemen's regions: the fragrant rice dishes of Hadramawt, the bold stews of the highlands, the honey-drenched sweets of Sana'a's old city. We cook the way our grandmothers did — with patience, spice, and love.
+                Our menu features a variety of freshly prepared sandwiches, salads, baked goods, and traditional Turkish touches, all made with care and attention to detail. At Maya, we believe that good food and warm service go hand in hand.
               </p>
             </div>
 
@@ -80,9 +79,9 @@ const AboutSection = () => {
             {/* Stat strip */}
             <div className="grid grid-cols-3 gap-6 mt-8">
               {[
-                { value: "1,000+", label: "Years of heritage" },
-                { value: "30+",    label: "Yemeni recipes" },
-                { value: "100%",   label: "Authentic spices" },
+                { value: "Fresh",  label: "Made daily" },
+                { value: "30+",   label: "Menu items" },
+                { value: "100%",  label: "Quality produce" },
               ].map((s) => (
                 <div key={s.label} className="text-center">
                   <p className="font-display text-2xl gold-gradient-text mb-1">{s.value}</p>
